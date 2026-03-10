@@ -1,0 +1,10 @@
+.idea
+/.idea
+*.idea*
+/.idea/
+
+node_modules
+
+dist
+
+.next

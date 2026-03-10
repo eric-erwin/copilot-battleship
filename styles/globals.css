@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Board cell base styles */
+@layer components {
+  .cell-base {
+    @apply w-8 h-8 sm:w-10 sm:h-10 border border-slate-300 flex items-center justify-center
+           text-xs font-medium cursor-pointer transition-colors duration-150
+           focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-indigo-500
+           dark:border-slate-600;
+  }
+  .cell-empty   { @apply bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700; }
+  .cell-ship    { @apply bg-slate-400 dark:bg-slate-500; }
+  .cell-hit     { @apply bg-red-500 text-white; }
+  .cell-miss    { @apply bg-slate-200 text-slate-400 dark:bg-slate-700; }
+  .cell-pending { @apply bg-indigo-200 animate-pulse dark:bg-indigo-800; }
+  .cell-sunk    { @apply bg-red-700 text-white; }
+}
